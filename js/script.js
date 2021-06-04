@@ -11,7 +11,27 @@ var app = new Vue({
         musique1: "",
         musique2: "",
         musique3: "",
-        bgcolor: "",
-        txtcolor: ""
+        bgcoloraffich: "",
+        txtcoloraffich: "",
+    },
+
+    methods: {
+
+        bgcolor: function (color) {
+            if (color != ''){
+                this.bgcoloraffich = color;
+            } else {
+                this.bgcoloraffich = "rgb(" + Math.random()*255 + ", " + Math.random()*255 + ", " + Math.random()*255 + ")";
+            }
+        },
+
+        txtcolor: function (txtcolor) {
+            if (txtcolor != ''){
+                this.txtcoloraffich = txtcolor;
+            } else {
+                this.txtcoloraffich = "rgb(" + Math.random()*255 + ", " + Math.random()*255 + ", " + Math.random()*255 + ")";
+            }
+        },
+
     }
 })

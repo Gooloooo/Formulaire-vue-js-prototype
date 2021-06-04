@@ -55,17 +55,17 @@
                             <div>
                                 <ul class="main_ul">
                                     <li class="radio">
-                                        <label>Blanc<input name="radio-buttons" value="#ffffff" type="radio" class="userColors" v-model="bgcolor" checked></label>
+                                        <input type="button" value="Blanc" class="randomAleatoire" v-on:click="bgcolor('rgb( 255, 255, 255)')">
                                     </li>
                                     <li class="radio">
-                                        <label>Noir <input name="radio-buttons" value="#000000" type="radio" class="userColors" v-model="bgcolor"></label>
+                                        <input type="button" value="Noir" class="randomAleatoire" v-on:click="bgcolor('rgb( 0, 0, 0)')">
                                     </li>
                                     <li class="radio">
-                                        <label>Rouge<input name="radio-buttons" value="red" type="radio" class="userColors" v-model="bgcolor"></label>
+                                        <input type="button" value="Rouge" class="randomAleatoire" v-on:click="bgcolor('rgb( 255, 0, 0)')">
                                     </li>
                                               
                                     <li class="radio">
-                                        <input type="button" value="Aléatoire" class="randomAleatoire">
+                                        <input type="button" value="Aléatoire" class="randomAleatoire" v-on:click="bgcolor('')">
                                     </li>
                                </ul>
                             </div>
@@ -78,17 +78,16 @@
                             <div>
                                 <ul class="main_ul">
                                 <li class="radio">
-                                    <label>Noir<input name="couleur1" value="black" type="radio" v-model="txtcolor" checked></label>
+                                    <input name="couleur1" value="Noir" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 0, 0, 0)')">
                                 </li>
                                 <li class="radio">
-                                    <label>Blanc <input name="couleur2" value="white" type="radio" v-model="txtcolor"></label>
+                                    <input name="couleur2" value="Blanc" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 255, 255, 255)')">
                                 </li>
                                 <li class="radio">
-                                    <label>Bleu<input name="couleur3" value="blue" type="radio" v-model="txtcolor"></label>
+                                    <input name="couleur3" value="Bleu" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 0, 0, 255)')">
                                 </li>
-                            
                                 <li class="radio">
-                                    <input type="button" value="Aléatoire" class="randomAleatoire">
+                                    <input type="button" value="Aléatoire" class="randomAleatoire"  v-on:click="txtcolor('')">
                                 </li>
                             </div>
                         </form>
@@ -98,7 +97,7 @@
     
                 </div>
             </main>
-            <section v-bind:style="{ backgroundColor: bgcolor, color: txtcolor}">
+            <section v-bind:style="{ 'background-color' : bgcoloraffich, color: txtcoloraffich }">
                 <div class="avatar">
                     <div class="pics">
                         <img src="Image/Mario.jpg" alt="minimario" class="junioMario">
@@ -109,21 +108,21 @@
                     </div>
                     <div class="birth"><h3>Née le {{ date }}</h3></div>
                 </div>
-                <div class="biography"><textarea id="biographie" rows="9" cols="45">{{ bio }}</textarea></div>
+                <div class="biography"><textarea id="biographie" rows="6" cols="55">{{ bio }}</textarea></div>
                 <div class="hobbies-musics">
                     
                     <ul class="space">
                         <li><p>Hobbies:</p></li>
-                        <li>- <textarea cols="20"> {{ hobbie1 }} </textarea></li>
-                        <li>- <textarea cols="20"> {{ hobbie2 }} </textarea></li>
-                        <li>- <textarea cols="20"> {{ hobbie3 }} </textarea></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie1 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie2 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie3 }}</textarea></li>
                     </ul>
                     
                     <ul class="space">
                         <li><p>Musics :</p></li>
-                        <li>- <textarea cols="20"></textarea></li>
-                        <li>- <textarea cols="20"></textarea></li>
-                        <li>- <textarea cols="20"></textarea></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique1 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique2 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique3 }}</textarea></li>
                     </ul>
                 </div>
             </section>

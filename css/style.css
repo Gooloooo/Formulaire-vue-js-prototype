@@ -1,134 +1,106 @@
-*{
-    font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-
-    
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 #app {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 form {
-    border: 3px solid black;
-    border-radius: 2em;
-    box-shadow: 3px 3px 3px black;
-    width: 100%;
-    padding: 5%;
+  border: 3px solid black;
+  border-radius: 2em;
+  box-shadow: 3px 3px 3px black;
+  width: 100%;
+  padding: 5%;
 }
 
 .biographie {
-    padding: 5%;
+  padding: 5%;
 }
 
- li {
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-
-.main_ul, .radio {
-    display: flex;
-    flex-direction: row;
-    margin-left: 8%;
-    padding-left: 2%;
-
+.main_ul,
+.radio {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8%;
+  padding-left: 2%;
 }
 
 .randomAleatoire {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 }
 
-
-
-
 /* avatar */
-section
-{
-    display: flex;
-    flex-direction: column;
-    border: 3px solid black;
-    border-radius: 2em;
-    box-shadow: 3px 3px 3px black;
+section {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  border-radius: 2em;
+  box-shadow: 3px 3px 3px black;
 
-    width: 30vw;
-    height: auto;
+  width: 35vw;
+  height: auto;
 }
 
 .pics {
-    display: flex;
-    justify-content: center;
-    padding: 4%;
+  display: flex;
+  justify-content: center;
+  padding: 4%;
 }
 
- .junioMario {
-  
-    width: 8em;
-    border-radius: 2em;
-    clip-path: circle(50% at 50% 50%);
+.junioMario {
+  width: 8em;
+  border-radius: 2em;
+  clip-path: circle(50% at 50% 50%);
 }
 
-.avatar
-{
-    display: flex;
-    flex-direction: column;
-    /* height: 25vh; */
+.avatar {
+  display: flex;
+  flex-direction: column;
+  /* height: 25vh; */
 }
 
-.avatar .pics
-{
-    height: 100px;
-    
+.avatar .pics {
+  height: 100px;
 }
 
-.fullname
-{
-    display: flex;
-    justify-content: space-around;
+.fullname {
+  display: flex;
+  justify-content: space-around;
 }
 
-.birth
-{
-    padding-left: 20px;
-    text-align: center;
+.birth {
+  padding-left: 20px;
 }
 
-
-
-textarea {
-    resize: none;
+.biography {
+  text-align: justify;
+  padding: 0 25px;
 }
 
-.biography
-{
-    text-align: justify;
-    padding: 0 25px; 
-    display: flex;
-    justify-content: center;
-   
+.biography h3 {
+  border: 1px solid black;
+  height: 100px;
 }
 
-.biography h3
-{
-    border: 1px solid black;
-    height: 100px;
+.hobbies-musics {
+  display: flex;
+  justify-content: space-around;
 }
 
-.hobbies-musics
-{
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-}
-
-section .hobbies-musics .space
-{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
+section .hobbies-musics .space {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
