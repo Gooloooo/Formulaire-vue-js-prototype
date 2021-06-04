@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <title>Formulaire</title>
+    </head>
+    <body>
+        <div id="app">
+            <main>
+                <div class="container">
+    
+                        <form action="">
+                            <div class="renseignement">
+                                <label>Nom :</label>
+                                    <input type="text" v-model="nom">
+                                    <br><br>
+        
+                                <label>Prénom :</label>
+                                    <input type="text" v-model="prenom">
+                                    <br><br>
+        
+                                <label>Date de naissance :</label>
+                                    <input type="date" v-model="date">
+                                    <br><br>
+        
+                                <label>Biographie (240 caractères):</label>
+                                    <br><br>
+                                    <textarea id="biographie" rows="5" cols="48" maxlength="240" v-model="bio"></textarea>
+        
+                                <br><br><br>
+                                <label>Hobbies :</label>
+                                    <input type="text" v-model="hobbie1">
+                                    <input type="text" v-model="hobbie2">
+                                    <input type="text" v-model="hobbie3">
+                                <br><br>
+        
+                                <label>Musique :</label>
+                                    <input type="text" v-model="musique1">
+                                    <input type="text" v-model="musique2">
+                                    <input type="text" v-model="musique3">
+                                <br><br>
+                                </div>
+                            <br><br>
+                            
+                            <div>
+                                <label>Couleur de fond :<label>
+                            </div>
+    
+                            <div>
+                                <ul class="main_ul">
+                                    <li class="radio">
+                                        <input type="button" value="Blanc" class="randomAleatoire" v-on:click="bgcolor('rgb( 255, 255, 255)')">
+                                    </li>
+                                    <li class="radio">
+                                        <input type="button" value="Noir" class="randomAleatoire" v-on:click="bgcolor('rgb( 0, 0, 0)')">
+                                    </li>
+                                    <li class="radio">
+                                        <input type="button" value="Rouge" class="randomAleatoire" v-on:click="bgcolor('rgb( 255, 0, 0)')">
+                                    </li>
+                                              
+                                    <li class="radio">
+                                        <input type="button" value="Aléatoire" class="randomAleatoire" v-on:click="bgcolor('')">
+                                    </li>
+                               </ul>
+                            </div>
+                            <br><br>
+                            
+                            <div>
+                                <label>Couleur du texte :<label>
+                            </div>
+    
+                            <div>
+                                <ul class="main_ul">
+                                <li class="radio">
+                                    <input name="couleur1" value="Noir" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 0, 0, 0)')">
+                                </li>
+                                <li class="radio">
+                                    <input name="couleur2" value="Blanc" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 255, 255, 255)')">
+                                </li>
+                                <li class="radio">
+                                    <input name="couleur3" value="Bleu" type="button" class="randomAleatoire" v-on:click="txtcolor('rgb( 0, 0, 255)')">
+                                </li>
+                                <li class="radio">
+                                    <input type="button" value="Aléatoire" class="randomAleatoire"  v-on:click="txtcolor('')">
+                                </li>
+                            </div>
+                        </form>
+                    </div>
+                    
+                <div>
+    
+                </div>
+            </main>
+            <section v-bind:style="{ 'background-color' : bgcoloraffich, color: txtcoloraffich }">
+                <div class="avatar">
+                    <div class="pics">
+                        <img src="Image/Mario.jpg" alt="minimario" class="junioMario">
+                    </div>
+                    <div class="fullname">
+                        <div class="name"><h3>{{ nom }}</h3></div>
+                        <div class="firstname"><h3>{{ prenom }}</h3></div>
+                    </div>
+                    <div class="birth"><h3>Née le {{ date }}</h3></div>
+                </div>
+                <div class="biography"><textarea id="biographie" rows="6" cols="55">{{ bio }}</textarea></div>
+                <div class="hobbies-musics">
+                    
+                    <ul class="space">
+                        <li><p>Hobbies:</p></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie1 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie2 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3"> {{ hobbie3 }}</textarea></li>
+                    </ul>
+                    
+                    <ul class="space">
+                        <li><p>Musics :</p></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique1 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique2 }}</textarea></li>
+                        <li>- <textarea cols="22" rows="3">{{ musique3 }}</textarea></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
